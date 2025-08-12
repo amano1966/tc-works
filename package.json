@@ -1,0 +1,29 @@
+{
+	"name": "sok_asset",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"server": "webpack --mode development --devtool cheap-module-source-map --config webpack.server.config.js",
+		"debug" : "webpack --mode development --devtool cheap-module-source-map --watch",
+		"build" : "webpack --mode production",
+		"start" : "node ./public/server.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+  "dependencies": {
+    "nanoid": "^5.0.2",
+    "trimble-connect-workspace-api": "^0.3.28"
+  },
+  "devDependencies": {
+    "@trimble-oss/modus-web-components": "^1.8.1",
+    "babel-loader": "^10.0.0",
+    "dotenv-webpack": "^8.0.1",
+    "html-webpack-plugin": "^5.6.3",
+    "webpack": "^5.96.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.0",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
