@@ -44,7 +44,7 @@ export async function getUsersMe() {
  * @returns {Promise<Array>} プロジェクトの配列を含むPromiseオブジェクト。
  */
 export async function getProjects(){
-    const res = await fetch(formatHref(`${TC_BASE_URL}/tc/api/2.0`, "/projects", {fullyLoaded : "true"}), {
+    const res = await fetch(formatHref(`${TC_BASE_URL}/tc/api/2.0`, "/projects", {fullyLoaded : "true", country : "asia"}), {
         cache: "default",
         headers: new Headers({
             "Content-Type" : "application/json",

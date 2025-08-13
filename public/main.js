@@ -96,7 +96,7 @@ async function getUsersMe() {
  * @returns {Promise<Array>} プロジェクトの配列を含むPromiseオブジェクト。
  */
 async function getProjects(){
-    const res = await fetch((0,_auth__WEBPACK_IMPORTED_MODULE_0__.formatHref)(`${TC_BASE_URL}/tc/api/2.0`, "/projects", {fullyLoaded : "true"}), {
+    const res = await fetch((0,_auth__WEBPACK_IMPORTED_MODULE_0__.formatHref)(`${TC_BASE_URL}/tc/api/2.0`, "/projects", {fullyLoaded : "true", country : "asia"}), {
         cache: "default",
         headers: new Headers({
             "Content-Type" : "application/json",
@@ -666,7 +666,7 @@ async function login() {
         connectProvider: "//app.connect.trimble.com",
         identityProvider: "https://id.trimble.com"
     });
-    
+    /* */
     if (result.accessToken){
         return result;
     }
@@ -871,7 +871,7 @@ if ((url.host === "localhost:8080" || url.search.includes("login")) && !url.sear
         window.session = await auth.login();
         if (window.session) {
             document.querySelector("html").style.removeProperty("display");
-            inistializeApp();
+            await inistializeApp();
         }
     })();
 }

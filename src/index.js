@@ -16,7 +16,7 @@ if ((url.host === "localhost:8080" || url.search.includes("login")) && !url.sear
         window.session = await auth.login();
         if (window.session) {
             document.querySelector("html").style.removeProperty("display");
-            inistializeApp();
+            await inistializeApp();
         }
     })();
 }

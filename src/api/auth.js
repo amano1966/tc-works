@@ -536,7 +536,7 @@ async function login() {
         connectProvider: "//app.connect.trimble.com",
         identityProvider: "https://id.trimble.com"
     });
-    
+    /* */
     if (result.accessToken){
         return result;
     }
